@@ -1,8 +1,9 @@
 How to execute:
-1) mvn package in the root;
-2) execute JUnit test IgnitionRunner#testJetty (it's in the ITest module).
+# mvn package in the root;
+# execute JUnit test IgnitionRunner#testJetty (it's in the ITest module).
 
 The result is:
+```
 SEVERE: Failed to process message [senderId=98138e20-8fe4-4750-8281-a92b2067fdcb, messageType=class o.a.i.i.processors.cache.query.GridCacheQueryRequest]
 java.lang.ClassCastException: LocatorBiPredicate cannot be cast to org.apache.ignite.lang.IgniteBiPredicate
     at org.apache.ignite.internal.processors.cache.query.GridCacheQueryRequest.finishUnmarshal(GridCacheQueryRequest.java:324)
@@ -17,7 +18,9 @@ java.lang.ClassCastException: LocatorBiPredicate cannot be cast to org.apache.ig
     at org.apache.ignite.internal.managers.communication.GridIoManager$7.run(GridIoManager.java:790)
     at org.apache.ignite.internal.util.StripedExecutor$Stripe.run(StripedExecutor.java:428)
     at java.lang.Thread.run(Thread.java:745)
-
+```
 where
+```
 import org.apache.ignite.lang.IgniteBiPredicate;
 public class LocatorBiPredicate implements IgniteBiPredicate<String, Locator> {...}
+```
