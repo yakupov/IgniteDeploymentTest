@@ -1,6 +1,6 @@
 How to execute:
-# mvn package in the root;
-# execute JUnit test IgnitionRunner#testJetty (it's in the ITest module).
+1. mvn package in the root;
+2. execute JUnit test IgnitionRunner#testJetty (it's in the ITest module).
 
 The result is:
 ```
